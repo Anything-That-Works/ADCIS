@@ -6,10 +6,6 @@
 //
 //
 
-@_exported import Domain
-
-import Domain
-
 public protocol NetworkService: AnyObject {
     func login(_ email: String,_ password: String) async throws -> String
 

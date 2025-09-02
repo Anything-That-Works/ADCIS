@@ -37,7 +37,7 @@ let package = Package(
             name: "NetworkService", dependencies: ["Domain"]
         ),
         .target(
-            name: "StorageService"
+            name: "StorageService", dependencies: ["Domain"]
         ),
         .testTarget(
             name: "NetworkServiceTests",
