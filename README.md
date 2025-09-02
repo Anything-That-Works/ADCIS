@@ -13,7 +13,7 @@ This project follows a **protocol-oriented, modular architecture** based on **Cl
 
 The **project itself uses a feature-based MVVM architecture**, which is ideal for larger teams working collaboratively without introducing dependencies.
 
-For **project navigation**, I used [WayFinder](git@github.com:Anything-That-Works/WayFinder.git), a wrapper package I'm working on for unified programmatic navigation across iOS versions (supporting iOS 14+).
+For **project navigation**, I used [WayFinder](https://github.com/Anything-That-Works/WayFinder.git), a wrapper package I'm working on for unified programmatic navigation across iOS versions (supporting iOS 14+).
 
 ## Running the Project
 
