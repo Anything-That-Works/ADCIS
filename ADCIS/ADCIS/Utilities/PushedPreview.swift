@@ -11,11 +11,11 @@ import WayFinder
 struct PushedPreview: View {
     @StateObject private var wayFinder: WayFinder<AppRoute> = WayFinder(initial: .login)
     let route: AppRoute
-
+    
     init(_ route: AppRoute) {
         self.route = route
     }
-
+    
     var body: some View {
         WayFinderHost(wayFinder) { route in
             switch route {

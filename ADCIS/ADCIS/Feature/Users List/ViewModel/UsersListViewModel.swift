@@ -13,29 +13,29 @@ class UsersListViewModel: ObservableObject {
     @Published var error: Error?
     @Published var isAlertShowing = false
     var isProcessing = false
-
+    
     var storageService: any StorageService
     var networkService: any NetworkService
-
+    
     init(storageService: any StorageService, networkService: any NetworkService) {
         self.storageService = storageService
         self.networkService = networkService
     }
-
+    
     init () {
         self.storageService = KeychainManager.shared
         self.networkService = LiveNetworkService.shared
     }
-
+    
     @Published var users: [User] = []
     var currentPage: Int = 1
     var totalPages: Int = 1
-
+    
     func getUsers() async {
         if isProcessing { return }
         isProcessing = true
         defer { isProcessing = false }
-
+        
         do {
             let response = try await networkService.getUsersResponse(from: currentPage)
             await setUsers(response)
@@ -43,7 +43,7 @@ class UsersListViewModel: ObservableObject {
             setError(error)
         }
     }
-
+    
     func logout() async {
         do {
             try await storageService.delete(forKey: StorageKeys.authToken)
@@ -56,7 +56,7 @@ class UsersListViewModel: ObservableObject {
             setError(error)
         }
     }
-
+    
     func loadMoreIfNeeded(currentUser user: User) async {
         guard let last = users.last else { return }
         if last.id == user.id, currentPage < totalPages {
@@ -64,7 +64,7 @@ class UsersListViewModel: ObservableObject {
             await getUsers()
         }
     }
-
+    
     @MainActor
     func setUsers(_ response: UsersResponse) {
         if response.page == 1 {
@@ -75,7 +75,7 @@ class UsersListViewModel: ObservableObject {
         currentPage = response.page
         totalPages = response.totalPages
     }
-
+    
     
     func setError(_ error: Error) {
         Task { @MainActor in

@@ -10,11 +10,12 @@ import Domain
 
 struct UsersListRowView: View {
     let user: User
+    @Environment(\.configuration) private var config
 
     init(_ user: User) {
         self.user = user
     }
-
+    
     var body: some View {
         HStack {
             AsyncImage(url: user.avatar) { image in
@@ -33,6 +34,7 @@ struct UsersListRowView: View {
                 Text(user.email)
                     .font(.caption)
             }
+            .foregroundStyle(config.colors.text)
         }
     }
 }

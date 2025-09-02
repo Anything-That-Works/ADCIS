@@ -9,13 +9,13 @@ import Foundation
 
 struct NetworkRoutes {
     private init() {}
-
+    
     static let baseURL: URL = URL(string: "https://reqres.in/api")!
     static let loginPath: String = "/login"
     static let usersPath: String = "/users"
-
+    
     static var loginURL: URL { baseURL.appendingPathComponent(loginPath) }
-
+    
     static func getUsersURL(page: Int) -> URL {
         let url = baseURL.appendingPathComponent(usersPath)
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)

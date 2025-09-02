@@ -13,6 +13,7 @@ struct InputField: View {
     @Binding var text: String
     var keyboardType: UIKeyboardType = .default
     var isSecure: Bool = false
+    @Environment(\.configuration) private var config
 
     var body: some View {
         VStack {
@@ -30,6 +31,7 @@ struct InputField: View {
                         .disableAutocorrection(true)
                 }
             }
+            .foregroundStyle(config.colors.text)
             Divider()
         }
     }

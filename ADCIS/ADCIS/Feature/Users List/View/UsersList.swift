@@ -11,7 +11,7 @@ import WayFinder
 struct UsersList: View {
     @EnvironmentObject private var wayFinder: WayFinder<AppRoute>
     @StateObject private var viewModel = UsersListViewModel()
-
+    
     var body: some View {
         VStack {
             List {

@@ -16,7 +16,7 @@ extension User {
         lastName: "Bluth",
         avatar: URL(string: "https://reqres.in/img/faces/1-image.jpg")!
     )
-
+    
     static let demoUsers: [User] = [
         User(
             id: 1,

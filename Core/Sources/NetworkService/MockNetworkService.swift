@@ -12,6 +12,7 @@ public actor MockNetworkService: NetworkService {
     public static let shared = MockNetworkService()
 
     private init() {}
+    
     public func login(_ email: String, _ password: String) async throws -> String {
         return "QpwL5tke4Pnpja7X4"
     }

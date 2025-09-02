@@ -10,7 +10,7 @@ import Foundation
 enum APIError: Error, LocalizedError {
     case invalidResponse
     case conflict(message: String)
-
+    
     var errorDescription: String? {
         switch self {
         case .conflict(let message):

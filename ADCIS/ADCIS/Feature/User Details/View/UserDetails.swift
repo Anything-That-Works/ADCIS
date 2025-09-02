@@ -10,6 +10,8 @@ import Domain
 
 struct UserDetails: View {
     let user: User
+    @Environment(\.configuration) private var config
+
     init(for user: User) {
         self.user = user
     }
@@ -32,6 +34,7 @@ struct UserDetails: View {
                 Text(user.email)
                     .font(.headline)
             }
+            .foregroundStyle(config.colors.text)
         }
     }
 }
