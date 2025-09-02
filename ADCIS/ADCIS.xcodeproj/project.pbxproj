@@ -14,14 +14,45 @@
 		057B3CB92E66EE1700E9D7AD /* StorageService in Frameworks */ = {isa = PBXBuildFile; productRef = 057B3CB82E66EE1700E9D7AD /* StorageService */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		057B3D892E67256200E9D7AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057B3B7C2E66388B00E9D7AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 057B3B832E66388B00E9D7AD;
+			remoteInfo = ADCIS;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		057B3B842E66388B00E9D7AD /* ADCIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADCIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		057B3D852E67256200E9D7AD /* ADCISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADCISTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		057B3D8F2E6725D100E9D7AD /* Exceptions for "ADCIS" folder in "ADCISTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Feature/Login/ViewModel/LoginViewModel.swift,
+				"Feature/Users List/ViewModel/UsersListViewModel.swift",
+				"Utilities/User+DemoData.swift",
+			);
+			target = 057B3D842E67256200E9D7AD /* ADCISTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		057B3B862E66388B00E9D7AD /* ADCIS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				057B3D8F2E6725D100E9D7AD /* Exceptions for "ADCIS" folder in "ADCISTests" target */,
+			);
 			path = ADCIS;
+			sourceTree = "<group>";
+		};
+		057B3D862E67256200E9D7AD /* ADCISTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ADCISTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +70,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		057B3D822E67256200E9D7AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				057B3B862E66388B00E9D7AD /* ADCIS */,
+				057B3D862E67256200E9D7AD /* ADCISTests */,
 				057B3B852E66388B00E9D7AD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				057B3B842E66388B00E9D7AD /* ADCIS.app */,
+				057B3D852E67256200E9D7AD /* ADCISTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +128,29 @@
 			productReference = 057B3B842E66388B00E9D7AD /* ADCIS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		057B3D842E67256200E9D7AD /* ADCISTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 057B3D8D2E67256200E9D7AD /* Build configuration list for PBXNativeTarget "ADCISTests" */;
+			buildPhases = (
+				057B3D812E67256200E9D7AD /* Sources */,
+				057B3D822E67256200E9D7AD /* Frameworks */,
+				057B3D832E67256200E9D7AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				057B3D8A2E67256200E9D7AD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				057B3D862E67256200E9D7AD /* ADCISTests */,
+			);
+			name = ADCISTests;
+			packageProductDependencies = (
+			);
+			productName = ADCISTests;
+			productReference = 057B3D852E67256200E9D7AD /* ADCISTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -100,6 +163,10 @@
 				TargetAttributes = {
 					057B3B832E66388B00E9D7AD = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					057B3D842E67256200E9D7AD = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 057B3B832E66388B00E9D7AD;
 					};
 				};
 			};
@@ -122,12 +189,20 @@
 			projectRoot = "";
 			targets = (
 				057B3B832E66388B00E9D7AD /* ADCIS */,
+				057B3D842E67256200E9D7AD /* ADCISTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		057B3B822E66388B00E9D7AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057B3D832E67256200E9D7AD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,7 +219,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		057B3D812E67256200E9D7AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		057B3D8A2E67256200E9D7AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 057B3B832E66388B00E9D7AD /* ADCIS */;
+			targetProxy = 057B3D892E67256200E9D7AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		057B3B8D2E66388D00E9D7AD /* Debug */ = {
@@ -330,6 +420,40 @@
 			};
 			name = Release;
 		};
+		057B3D8B2E67256200E9D7AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yasha.ADCISTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ADCIS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ADCIS";
+			};
+			name = Debug;
+		};
+		057B3D8C2E67256200E9D7AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yasha.ADCISTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ADCIS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ADCIS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -347,6 +471,15 @@
 			buildConfigurations = (
 				057B3B902E66388D00E9D7AD /* Debug */,
 				057B3B912E66388D00E9D7AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		057B3D8D2E67256200E9D7AD /* Build configuration list for PBXNativeTarget "ADCISTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057B3D8B2E67256200E9D7AD /* Debug */,
+				057B3D8C2E67256200E9D7AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

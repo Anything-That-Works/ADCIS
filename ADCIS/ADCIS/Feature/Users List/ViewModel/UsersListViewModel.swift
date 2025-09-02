@@ -66,7 +66,7 @@ class UsersListViewModel: ObservableObject {
     }
 
     @MainActor
-    private func setUsers(_ response: UsersResponse) {
+    func setUsers(_ response: UsersResponse) {
         if response.page == 1 {
             users = response.data
         } else {
@@ -77,7 +77,7 @@ class UsersListViewModel: ObservableObject {
     }
 
     
-    private func setError(_ error: Error) {
+    func setError(_ error: Error) {
         Task { @MainActor in
             self.error = error
             self.isAlertShowing = true

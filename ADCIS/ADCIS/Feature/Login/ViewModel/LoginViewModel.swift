@@ -40,7 +40,7 @@ class LoginViewModel: ObservableObject {
         }
     }
 
-    private func setError(_ error: Error) {
+    func setError(_ error: Error) {
         Task { @MainActor in
             self.error = error
             self.isAlertShowing = true
